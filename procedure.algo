@@ -1,0 +1,51 @@
+PROCEDURE dot_product(VAR ps:INTEGER, a,b : ARRAY_OF INTEGER[3];)
+VAR i:INTEGER];
+BEGIN
+    ps:= 0
+    FOR i FROM 0 TO 2 STEP 1  DO
+        ps := ps + a[i]*b[j]
+    END_FOR 
+       
+END
+
+
+FUNCTION dotproduct(a,b) : INTEGER
+VAR ps : INTEGER
+     i:INTEGER
+
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        ps := ps + a[i]*b[j]
+    END_FOR 
+    RETURN ps ;
+END
+
+
+
+//*****************************************PROCEDURE**********************************
+ALGORITHM PSPROC
+VAR ps : INTEGER
+VAR V1,V2 : ARRAY_OF INTEGER[3];
+BEGIN
+      dot_product(VAR ps,V1,V2) 
+      if (ps=0) THEN write("the vectors are orthogonal")
+
+END
+
+//*****************************************FUNCTION***********************************
+
+
+ALGORITHM PSfunction
+ VAR V1,V2 : ARRAY_OF INTEGER[3];
+
+BEGIN
+    
+    if(dotproduct(V1,V2)=0) THEN write("the vectors are orthogonal")
+    
+END
+
+
+
+
+
+
